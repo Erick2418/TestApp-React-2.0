@@ -4,7 +4,7 @@ const GifExperApp = ()=>{
 
     return (
         <>
-        <h2>GifExperApp</h2>
+        <h2>GifExperAapp</h2>
         <hr></hr>
         </>
     );
