@@ -12,7 +12,9 @@ const GifExperApp = ()=>{
     return (
         <>
         <h2>GifExperApp</h2>
-        <AddCategory/>
+        {//Dato de vital importancia, se pueden enviar funciones a los componenetes
+        }
+        <AddCategory setCategories={setCategories}/>
         <hr></hr>
        
         <ol>
