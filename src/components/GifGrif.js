@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
+import { GifGridItem } from './GifGridItem';
 
 export const GifGrif = ({category}) => {
-    /*
-    El problema es que si se colocan mas componentes o mas funciones 
-    al querer hacerlas todo se setea de nuevo y eso no es lo que queremos
-    queremos que cada cosa funcione 1 vez.. eso se logra con useEfect
-    */
-    
-    const [count, setcount] = useState(0);
+
+    const [images, setimages] = useState([]);
+   
     useEffect( ()=>{
         getGifs();
     },[]);
@@ -29,14 +26,22 @@ export const GifGrif = ({category}) => {
         )
 
         console.log(gifs);
+        setimages(gifs);
     }
-    return (
-        <div>
+    return (    
+        <>
             <h3>{category}</h3>
-            <h3>{count}</h3>
-            <button onClick={ ()=>{
-                setcount(count+1)
-            }}> + </button>
-        </div>
+                {
+                    images.map( img=>(
+                      <GifGridItem
+                        key={img.id}  
+                        {...img }// se envian de manera independiente
+                      />
+                     ))
+                }
+               
+
+            
+        </>
     )
 }
