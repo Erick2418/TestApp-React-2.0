@@ -5,7 +5,7 @@ import { GifGrif } from './components/GifGrif';
 
 const GifExperApp = ()=>{
 
-    const [categories, setCategories] = useState(['One Punch']);
+    const [categories, setCategories] = useState(['Lufy']);
 
     return (
         <>
