@@ -1,6 +1,6 @@
 ### Atajo
 racf + tab y crea un componente
-
+GENERAR BUILD DE PRODUCCION ES: npm run build
 
 # Getting Started with Create React App
 
